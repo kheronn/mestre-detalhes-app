@@ -1,0 +1,20 @@
+<section class="details-card">
+  <div class="container mx-auto">
+    <div class="row ">
+      <div class="col-md-10 mx-auto" *ngIf="anime">
+        <div class="card-content">
+          <div class="card-img">
+            <img [src]="anime.attributes.posterImage.medium" class="card-img-top shadow" alt="">
+          </div>
+          <div class="card-desc">
+            <h3>{{anime.attributes.canonicalTitle}}</h3>
+            <h4>Episódios: {{anime.attributes.episodeCount}}</h4>
+            <h5>{{anime.attributes.startDate | date}} a {{anime.attributes.endDate | date}} </h5>
+            <p>{{anime.attributes.synopsis}}</p>
+            <a routerLink="/mestre" class="btn-card">Voltar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

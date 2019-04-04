@@ -1,0 +1,13 @@
+<div class="container p-2">
+  <div class="row p-2">
+    <div *ngFor="let anime of list" class="card col-lg-4" style="width: 18rem;">
+      <img [src]="anime.attributes.posterImage.small " class="card-img-top img-thumbnail shadow" alt="">
+      <div class="card-body">
+        <h5 class="card-title">{{anime.attributes.canonicalTitle}}</h5>
+        <p class="card-text">{{anime.attributes.synopsis.slice(0,50)}}</p>
+        <button class="btn btn-primary" (click)="goToDetalhesByService(anime)">Detalhes (service)</button>
+        <button class="btn btn-danger" (click)="goToDetalhesByState(anime)">Detalhes (state)</button>
+      </div>
+    </div>
+  </div>
+</div>
